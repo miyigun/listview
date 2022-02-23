@@ -33,12 +33,24 @@ class ListViewBody extends StatelessWidget{
 }
 
 Widget _myListView(BuildContext context) {
+
+  final ulkeler=["Türkiye","Almanya","Polonya","Portekiz","İtalya",
+                  "Fransa","Norveç","İsveç","Macaristan","Japonya","Çin",
+                "İngiltere","ABD","Avusturya","Mısır"];
   return ListView.builder(
-    itemBuilder: (context,index){
-      return ListTile(
-        title: Text('Satır $index'),
-      );
-    }
+    itemCount: ulkeler.length,
+      itemBuilder: (context,index){
+        return ListTile(
+          title: Text(ulkeler[index]),
+        );
+      }
+  );
+  // return ListView.builder(
+  //   itemBuilder: (context,index){
+  //     return ListTile(
+  //       title: Text('Satır $index'),
+  //     );
+  //   }
 
     // children:
     //   ListTile.divideTiles(
@@ -58,7 +70,7 @@ Widget _myListView(BuildContext context) {
     //         ),
     //       ],
     //   ).toList()
-  );
+  //);
 }
 
 
